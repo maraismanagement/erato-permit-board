@@ -57,6 +57,8 @@ h2 { font-family:var(--serif); font-size:1.5rem; font-weight:600; margin:2.2rem 
 .steps li.none { color:var(--soft); }
 .sn { flex:1; }
 .sd { font-size:.8rem; color:var(--soft); font-family:var(--mono); white-space:nowrap; }
+.sp { font-size:.8rem; color:var(--accent); font-family:var(--mono); white-space:nowrap; }
+.sp.late { color:var(--red); font-weight:700; }
 .ic { width:22px; height:22px; flex:none; }
 .ic.done circle { fill:var(--green-soft); } .ic.done path { stroke:var(--green); }
 .ic.failed circle { fill:var(--red-soft); } .ic.failed path { stroke:var(--red); }
@@ -332,6 +334,7 @@ footer code { font-family:var(--mono); font-size:.8rem; background:var(--accent-
 </div></div>
 
 <footer>
+  <p><b>Promised dates</b> ("promised 9/12") come from the shared inspection-commitments sheet filled in by JLV. A red "promised — late" means the committed date passed without the inspection being passed.</p>
   <p><b>About expiration dates:</b> several permits show past-due expiry dates. The city routinely extends these — trades just request renewal when scheduling their next inspection. Not a fire drill.</p>
   <p><b>Old paperwork:</b> the construction power loop is finaled and both lot resubdivisions are complete. Five voided/duplicate permits show $2,104 in fees that shouldn't be owed — we'll ask Safety &amp; Permits to zero them before the C/O. Both 2023 hotel-license applications failed and are closed; a fresh application goes in once the C/O exists.</p>
   <p>Data: City of New Orleans OneStop + open-data feed. Click any permit number to open its city record. Refresh: <code>python3 refresh.py &amp;&amp; python3 build_board.py</code>, then republish.</p>
